@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Coach - Detaylar</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">AD SOYAD</a>
+        <ul><li><a href="index.html">← Geri Dön</a></li></ul>
+    </nav>
+
+    <div class="container">
+        <h1>AI Student Coach: Akademik Başarı Asistanı</h1>
+        
+        <div class="tech-stack">
+            <div class="tech-item">🧠 Scikit-Learn</div>
+            <div class="tech-item">🐼 Pandas</div>
+            <div class="tech-item">🌶️ Flask</div>
+            <div class="tech-item">📈 Matplotlib</div>
+        </div>
+
+        <h3>Proje Galerisi</h3>
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="assets/images/student_coach/1.png" alt="Ekran 1"></div>
+            <div class="gallery-item"><img src="assets/images/student_coach/2.png" alt="Ekran 2"></div>
+            <div class="gallery-item"><img src="assets/images/student_coach/3.png" alt="Ekran 3"></div>
+        </div>
+
+        <h3>Proje Özeti</h3>
+        <p>Bu uygulama, öğrencinin yaşam alışkanlıklarını analiz eder ve onu "Başarılı Öğrenci" profilleriyle kıyaslar. Aradaki farkı analiz ederek "Günlük çalışma rutinini 1 saat artır" gibi net hedefler koyar.</p>
+
+        <h3>Veri Akışı</h3>
+        <div class="mermaid">
+            graph LR
+            A[Form Verisi] -->|POST| B(Flask)
+            B -->|Preprocess| C[StandardScaler]
+            C --> D[Regresyon Modeli]
+            C --> E[KNN Benzerlik Modeli]
+            D -->|Tahmin| F[Sonuç]
+            E -->|Fark Analizi| G[Tavsiyeler]
+        </div>
+
+        
+
+        <h3>Örnek Kod: Grafik Üretimi</h3>
+        <pre><code class="language-python">
+import matplotlib
+matplotlib.use('Agg') # GUI hatasını önler
+import matplotlib.pyplot as plt
+
+def create_chart():
+    # ... grafik çizim kodları ...
+    img = io.BytesIO()
+    plt.savefig(img, format='png')
+    img.seek(0)
+    return base64.b64encode(img.getvalue()).decode()
+        </code></pre>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-python.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
+</body>
+</html>

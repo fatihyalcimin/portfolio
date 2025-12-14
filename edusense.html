@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduSense Pro - Detaylar</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">AD SOYAD</a>
+        <ul><li><a href="index.html">← Geri Dön</a></li></ul>
+    </nav>
+
+    <div class="container">
+        <h1>EduSense Pro: Gerçek Zamanlı Duygu Analizi</h1>
+        
+        <div class="tech-stack">
+            <div class="tech-item">🚀 FastAPI</div>
+            <div class="tech-item">👁️ YOLOv8 (ONNX)</div>
+            <div class="tech-item">📊 Chart.js</div>
+            <div class="tech-item">🐍 Python</div>
+        </div>
+
+        <h3>Proje Galerisi</h3>
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="assets/images/edusense/1.png" alt="Ekran 1"></div>
+            <div class="gallery-item"><img src="assets/images/edusense/2.png" alt="Ekran 2"></div>
+            <div class="gallery-item"><img src="assets/images/edusense/3.png" alt="Ekran 3"></div>
+            <div class="gallery-item"><img src="assets/images/edusense/4.png" alt="Ekran 4"></div>
+            <div class="gallery-item"><img src="assets/images/edusense/5.png" alt="Ekran 5"></div>
+            <div class="gallery-item"><img src="assets/images/edusense/6.png" alt="Ekran 6"></div>
+            <div class="gallery-item"><img src="assets/images/edusense/7.png" alt="Ekran 7"></div>
+            <div class="gallery-item"><img src="assets/images/edusense/8.png" alt="Ekran 8"></div>
+        </div>
+
+        <h3>Proje Özeti</h3>
+        <p>Uzaktan eğitimde eğitmenlerin en büyük sorunu öğrenci ilgisini takip edememektir. EduSense, web kamerası üzerinden öğrencilerin 8 temel duygu durumunu analiz eder ve öğretmene anlık uyarılar (Örn: "Sınıfın dikkati dağıldı") gönderir.</p>
+
+        <h3>Sistem Mimarisi</h3>
+        <div class="mermaid">
+            graph LR
+            A[Webcam] -->|Frame| B(JS Client)
+            B -->|POST| C{FastAPI}
+            C -->|CLAHE & LAB| D[Ön İşleme]
+            D -->|Inference| E[YOLO Model]
+            E -->|JSON| B
+            B -->|Render| F[Chart.js Dashboard]
+        </div>
+
+        
+# Görüntü İyileştirme Bloğu
+lab = cv2.cvtColor(img, cv2.COLOR_BGR2LAB)
+l, a, b = cv2.split(lab)
+clahe = cv2.createCLAHE(clipLimit=3.0, tileGridSize=(8,8))
+cl = clahe.apply(l)
+limg = cv2.merge((cl,a,b))
+img_processed = cv2.cvtColor(limg, cv2.COLOR_LAB2BGR)
+        </code></pre>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-python.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
+</body>
+</html>

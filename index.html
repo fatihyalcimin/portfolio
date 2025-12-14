@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fatih Yalçimin | Portfolyo</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome & Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigasyon -->
+    <nav>
+        <a href="index.html" class="logo">FATİH YALÇİMİN</a>
+        <ul>
+            <li><a href="#projects">Projeler</a></li>
+            <li><a href="#about">Hakkımda</a></li>
+            <li><a href="assets/cv.pdf" target="_blank" class="btn-nav"><i class="fas fa-download"></i> CV İndir</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Bölümü -->
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Fatih Yalçimin</h1>
+            <!-- Daha sade ve gerçekçi bir başlık -->
+            <p class="subtitle">Bilişim Sistemleri Mühendisliği Öğrencisi</p>
+            
+            <p style="color: #cbd5e1; font-size: 1rem; margin-bottom: 25px;">
+                Veri Bilimi ve Yapay Zeka alanlarına ilgi duyuyor, kendimi geliştirmek için projeler üretiyorum.
+            </p>
+
+            
+                
+                
+                
+            
+
+            <div class="social-links">
+                <!-- Güncellenen LinkedIn Linki -->
+                <a href="https://www.linkedin.com/in/fatih-yal%C3%A7imin-313841236/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <!-- Güncellenen GitHub Linki -->
+                <a href="https://github.com/fatihyalcimin?tab=repositories" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <!-- Kaggle Kaldırıldı, yerine mail eklendi -->
+                <a href="mailto:yalciminfatih2@gmail.com" title="Bana Ulaşın"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projeler Bölümü -->
+    <div class="container" id="projects">
+        <h2 class="section-title">Projelerim</h2>
+        <div class="grid">
+            
+            <!-- Proje 1: EduSense -->
+            <div class="card">
+                <div class="card-image">
+                    <img src="assets/images/edusense/1.png" alt="EduSense Pro Dashboard">
+                </div>
+                <div class="card-content">
+                    <h3>EduSense Pro</h3>
+                    <p>Web kamerası üzerinden duygu analizi yaparak eğitmene geri bildirim sunan bir görüntü işleme projesi.</p>
+                    <div class="tech-badges">
+                        <span class="tech-badge">FastAPI</span>
+                        <span class="tech-badge">YOLOv8</span>
+                        <span class="tech-badge">OpenCV</span>
+                    </div>
+                    <a href="edusense.html" class="btn-link">Projeyi İncele <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Proje 2: Student Coach -->
+            <div class="card">
+                <div class="card-image">
+                    <img src="assets/images/student_coach/1.png" alt="Student Coach Interface">
+                </div>
+                <div class="card-content">
+                    <h3>AI Student Coach</h3>
+                    <p>Öğrenci alışkanlıklarını analiz edip başarı tahmini yapan ve kişisel tavsiyeler veren veri bilimi uygulaması.</p>
+                    <div class="tech-badges">
+                        <span class="tech-badge">Scikit-Learn</span>
+                        <span class="tech-badge">Flask</span>
+                        <span class="tech-badge">Pandas</span>
+                    </div>
+                    <a href="student_coach.html" class="btn-link">Projeyi İncele <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Hakkımda Bölümü -->
+    <div class="container" id="about" style="background: white; border-radius: 12px; margin-bottom: 60px;">
+        <div style="display: flex; gap: 40px; align-items: center; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 300px;">
+                <h2 class="section-title" style="margin-bottom: 20px;">Hakkımda</h2>
+                <p>Merhaba, ben Fatih. Muğla Sıtkı Koçman Üniversitesi Bilişim Sistemleri Mühendisliği 4. sınıf öğrencisiyim.</p>
+                <p>Yazılım dünyasına olan ilgimi akademik eğitimimle birleştirerek özellikle <strong>Yapay Zeka</strong> ve <strong>Veri Bilimi</strong> alanlarında kendimi geliştiriyorum. Teorik bilgilerimi pekiştirmek için gerçek hayat problemlerine çözüm arayan projeler (EduSense, Student Coach gibi) geliştiriyorum.</p>
+                <p>Python ekosistemini (Pandas, Scikit-Learn, OpenCV) aktif olarak kullanıyorum ve yeni teknolojileri öğrenmeye her zaman açığım.</p>
+            </div>
+            <div style="flex: 1; text-align: center;">
+                <i class="fas fa-laptop-code" style="font-size: 8rem; color: #e2e8f0;"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer style="background: var(--dark); color: #94a3b8; padding: 40px 0; text-align: center;">
+        <p>&copy; 2025 Fatih Yalçimin.</p>
+        <div class="social-links" style="font-size: 1.2rem; margin-top: 10px;">
+            <a href="https://github.com/fatihyalcimin?tab=repositories" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/fatih-yal%C3%A7imin-313841236/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+
+</body>
+</html>

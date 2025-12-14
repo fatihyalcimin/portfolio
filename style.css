@@ -1,0 +1,85 @@
+/* style.css - Tüm Site İçin Geçerli Tasarım */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary: #2563EB;
+    --dark: #0F172A;
+    --light: #F8FAFC;
+    --text: #334155;
+    --code-bg: #1E293B;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    margin: 0;
+    background-color: var(--light);
+}
+
+/* Navigasyon */
+nav {
+    background: white;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+nav .logo { font-weight: 700; font-size: 1.2rem; color: var(--dark); text-decoration: none; }
+nav ul { display: flex; list-style: none; gap: 20px; padding: 0; margin: 0; }
+nav a { text-decoration: none; color: var(--text); font-weight: 500; transition: 0.3s; }
+nav a:hover { color: var(--primary); }
+.btn { background: var(--primary); color: white !important; padding: 8px 16px; border-radius: 6px; transition: 0.3s; }
+.btn:hover { background: #1d4ed8; }
+
+/* Genel Layout */
+.container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+.hero { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: white; padding: 80px 20px; text-align: center; }
+.hero h1 { font-size: 3rem; margin: 0 0 15px; }
+.social-icons a { color: white; font-size: 1.5rem; margin: 0 10px; transition: 0.3s; }
+.social-icons a:hover { color: var(--primary); }
+
+/* Proje Kartları (Ana Sayfa) */
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-top: 30px; }
+.card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: 0.3s; }
+.card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+.card img { width: 100%; height: 220px; object-fit: cover; }
+.card-content { padding: 25px; }
+.tags span { background: #e2e8f0; font-size: 0.8rem; padding: 4px 8px; border-radius: 4px; margin-right: 5px; color: var(--dark); font-weight: 600; }
+
+/* DETAY SAYFASI ÖZEL - GALERİ */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive */
+    gap: 15px;
+    margin-bottom: 40px;
+}
+.gallery-item {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border: 1px solid #eee;
+    transition: transform 0.3s ease;
+}
+.gallery-item:hover { transform: scale(1.02); }
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Teknik Alanlar */
+.tech-stack { display: flex; gap: 15px; margin: 20px 0; flex-wrap: wrap; }
+.tech-item { display: flex; align-items: center; gap: 6px; font-weight: 600; background: white; padding: 8px 15px; border-radius: 20px; border: 1px solid #e2e8f0; }
+.challenge-box, .solution-box { padding: 20px; margin: 20px 0; border-radius: 8px; }
+.challenge-box { background: #fff4f4; border-left: 5px solid #dc2626; }
+.solution-box { background: #f0fdf4; border-left: 5px solid #16a34a; }
+
+/* Kod ve Şema */
+pre { background: var(--code-bg) !important; border-radius: 8px; padding: 20px; font-size: 0.9rem; }
+.mermaid { background: white; padding: 20px; border-radius: 8px; text-align: center; overflow-x: auto; }
